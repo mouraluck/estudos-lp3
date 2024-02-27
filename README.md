@@ -6,3 +6,4 @@ Este repositório tem como objeetivo armazenar e controlar os códigos da discip
 
 - Aula 00 git e github
 - Aula 01 Introdução ao Python
+- Aula 02 Estruturas de controle 
