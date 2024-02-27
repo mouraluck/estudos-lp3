@@ -1,0 +1,5 @@
+git init - Iniciar um repositorio
+git status - Ver o status do repositorio
+git add. - Adiciona um commit ao git
+git commit -m "commit inicial" - Inicia um commit com a mensagem "commit inicial"
+git clone - Clona um repositorio remoto
