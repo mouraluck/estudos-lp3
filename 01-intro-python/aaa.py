@@ -25,5 +25,5 @@ y2 = float(input())
 
 solutionX = (x2 - x1)
 solutionY = (y2 - y1)
-dab = math.sqrt(solutionY** 2) + (solutionX** 2)
-print(dab)
+dab = math.sqrt((solutionY** 2) + (solutionX** 2))
+print("{:.4f}".format(dab))
