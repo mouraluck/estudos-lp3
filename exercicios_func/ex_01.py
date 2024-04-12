@@ -4,20 +4,24 @@
  
 import random
 
+
 num = random.randint(1,100)
-print(num)
-ent = int(input())
+
 def retorna_se_maior(ent,num):
     if ent >100 or ent <1:
         return f'fora da faixa'
-    elif ent < num:
-        return f'Tá alto fio'
     elif ent > num:
+        return f'Tá alto fio'
+    elif ent < num:
         return f'Ta baixo fio'
-    while ent!= num:
-        while ent!= num:
-            print(retorna_se_maior(ent= ent, num= num))
-            
+    elif ent == num:
+        print("Acertou miseravi")
         
 
-print("Acertou miseravi")
+while True:
+    ent = int(input())
+    
+    print(retorna_se_maior(ent= ent, num= num))
+    if ent == num:
+        break
+    
