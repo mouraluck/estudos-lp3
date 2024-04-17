@@ -17,4 +17,14 @@ while True:
     else: 
         print("opção inválida")
 
+def retorna_vencedor(v1,v2,v3):
+    return max(v1,v2,v3)
+
 print(f"O candidato 1 teve {v1} votos\nO candidato 2 teve {v2} votos\nO candidato 3 teve {v3} votos")
+
+if retorna_vencedor(v1,v2,v3) == v1:
+    print("O candidato 1 ganhou")
+elif retorna_vencedor(v1,v2,v3) == v2:
+    print("O candidato 2 ganhou")
+elif retorna_vencedor(v1,v2,v3) == v3:
+    print("O candidato 3 ganhou")

@@ -2,9 +2,11 @@
 digite uma palavraou frase e verifique se é um palíndromo 
 (ou seja, pode ser lida de frente para trás e de trás para frente da mesma forma).'''
 
-palavra = input()
-def retorna_ultimas_letra(palavra,letra):
-    return palavra[::-1][:palavra.index(letra) + 1:]
+palavra = input("Digite a palavra a ser verificada: ")
+def retorna_ultimas_letra(palavra):
+    return palavra[::-1]
 
-for letra in palavra:
-    print(letra, retorna_ultimas_letra(palavra, letra)) 
+if palavra == retorna_ultimas_letra(palavra):
+    print("É um palindromo")
+else:
+    print("Não é um palindromo")
