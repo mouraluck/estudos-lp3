@@ -1,21 +1,40 @@
-'''
-Ex01. Crie um programa que recebe como entrada o comprimento, altura e a largura de um aquário e calcule as seguintes informações.
+def calcula_volume(comprimento, altura, largura):
+    return (comprimento * altura * largura) / 1000
 
-    O volume do aquário em litros;
-    A potência do termostato necessária para manter a temperatura adequada dentro do aquário;
-    A quantidade em litros de filtragem por hora necessária para manter a qualidade da água.
+def calcula_potencia(volume, temp_desejada, temp_ambiente):
+    return volume * 0.05 * (temp_desejada - temp_ambiente)
 
-    Volume é dado por (comprimento * altura * largura) / 1000
-    A potência do termostato depende do tamanho do aquário e da temperatura ambiente. Para o cálculo utilizar a fórmula: potencia = volume * 0,05 * (temperatura desejada - temperatura ambiente)
-    A quantidade de filtragem por hora deve ser no mínimo 2 a 3 vezes o volume do aquário.'''
+def calcula_filtragem(volume):
+    return volume * 2.5
 
-from calc import calcula_filtragem,calcula_potencia,calcula_volume
-from entradas import in_altura,in_comprimento,in_largura
+def in_comprimento():
+    return float(input("Insira o comprimento (em cm): "))
 
-largura = in_largura
-altura = in_altura
-comprimento = in_comprimento
+def in_altura():
+    return float(input("Insira a altura (em cm): "))
 
+def in_largura():
+    return float(input("Insira a largura (em cm): "))
+
+def in_temp_ambiente():
+    return float(input("Insira a temperatura ambiente (em °C): "))
+
+def in_temp_desejada():
+    return float(input("Insira a temperatura desejada (em °C): "))
+
+# Recebendo as entradas do usuário
+comprimento = in_comprimento()
+altura = in_altura()
+largura = in_largura()
+temp_ambiente = in_temp_ambiente()
+temp_desejada = in_temp_desejada()
+
+# Calculando os resultados
 volume = calcula_volume(comprimento, altura, largura)
-print(volume)
-print(calcula_potencia(volume,te))
+potencia = calcula_potencia(volume, temp_desejada, temp_ambiente)
+filtragem = calcula_filtragem(volume)
+
+# Exibindo os resultados
+print(f'Volume: {volume:.2f} litros')
+print(f'Potência do termostato: {potencia:.2f} watts')
+print(f'Filtragem necessária: {filtragem:.2f} litros por hora')
